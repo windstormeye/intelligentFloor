@@ -17,6 +17,10 @@
 		2CA0E7CB1E62656900A826E9 /* loginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7CA1E62656900A826E9 /* loginView.m */; };
 		2CA0E7CD1E6266F400A826E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA0E7CC1E6266F400A826E9 /* Main.storyboard */; };
 		2CA0E7D61E62922600A826E9 /* UIView+YSTextInputKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7D51E62922600A826E9 /* UIView+YSTextInputKeyboard.m */; };
+		2CA0E7D91E62B73D00A826E9 /* loginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7D81E62B73D00A826E9 /* loginVC.m */; };
+		2CA0E7DC1E62BCAA00A826E9 /* stepStVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7DB1E62BCAA00A826E9 /* stepStVC.m */; };
+		2CA0E7DF1E62BCB800A826E9 /* peopleStVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7DE1E62BCB800A826E9 /* peopleStVC.m */; };
+		2CA0E7E21E62BCCB00A826E9 /* waringVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7E11E62BCCB00A826E9 /* waringVC.m */; };
 		74955E46FA1AF1C81784144F /* libPods-intelligentFloor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 745F5F86E6C0A356D9EACCF2 /* libPods-intelligentFloor.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +63,14 @@
 		2CA0E7CE1E62694900A826E9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		2CA0E7D41E62922600A826E9 /* UIView+YSTextInputKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YSTextInputKeyboard.h"; sourceTree = "<group>"; };
 		2CA0E7D51E62922600A826E9 /* UIView+YSTextInputKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YSTextInputKeyboard.m"; sourceTree = "<group>"; };
+		2CA0E7D71E62B73D00A826E9 /* loginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginVC.h; sourceTree = "<group>"; };
+		2CA0E7D81E62B73D00A826E9 /* loginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginVC.m; sourceTree = "<group>"; };
+		2CA0E7DA1E62BCAA00A826E9 /* stepStVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stepStVC.h; sourceTree = "<group>"; };
+		2CA0E7DB1E62BCAA00A826E9 /* stepStVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = stepStVC.m; sourceTree = "<group>"; };
+		2CA0E7DD1E62BCB800A826E9 /* peopleStVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = peopleStVC.h; sourceTree = "<group>"; };
+		2CA0E7DE1E62BCB800A826E9 /* peopleStVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = peopleStVC.m; sourceTree = "<group>"; };
+		2CA0E7E01E62BCCB00A826E9 /* waringVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = waringVC.h; sourceTree = "<group>"; };
+		2CA0E7E11E62BCCB00A826E9 /* waringVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = waringVC.m; sourceTree = "<group>"; };
 		31AC3312BA98114DA396568B /* Pods-intelligentFloor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligentFloor.release.xcconfig"; path = "Pods/Target Support Files/Pods-intelligentFloor/Pods-intelligentFloor.release.xcconfig"; sourceTree = "<group>"; };
 		745F5F86E6C0A356D9EACCF2 /* libPods-intelligentFloor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-intelligentFloor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CB5BF37732249F352C73B3 /* Pods-intelligentFloor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligentFloor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-intelligentFloor/Pods-intelligentFloor.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +166,14 @@
 			children = (
 				2CA0E7961E619B3F00A826E9 /* ViewController.h */,
 				2CA0E7971E619B3F00A826E9 /* ViewController.m */,
+				2CA0E7D71E62B73D00A826E9 /* loginVC.h */,
+				2CA0E7D81E62B73D00A826E9 /* loginVC.m */,
+				2CA0E7DA1E62BCAA00A826E9 /* stepStVC.h */,
+				2CA0E7DB1E62BCAA00A826E9 /* stepStVC.m */,
+				2CA0E7DD1E62BCB800A826E9 /* peopleStVC.h */,
+				2CA0E7DE1E62BCB800A826E9 /* peopleStVC.m */,
+				2CA0E7E01E62BCCB00A826E9 /* waringVC.h */,
+				2CA0E7E11E62BCCB00A826E9 /* waringVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -397,8 +417,12 @@
 			files = (
 				2CA0E7981E619B3F00A826E9 /* ViewController.m in Sources */,
 				2CA0E7D61E62922600A826E9 /* UIView+YSTextInputKeyboard.m in Sources */,
+				2CA0E7E21E62BCCB00A826E9 /* waringVC.m in Sources */,
 				2CA0E7951E619B3F00A826E9 /* AppDelegate.m in Sources */,
 				2CA0E7CB1E62656900A826E9 /* loginView.m in Sources */,
+				2CA0E7DF1E62BCB800A826E9 /* peopleStVC.m in Sources */,
+				2CA0E7DC1E62BCAA00A826E9 /* stepStVC.m in Sources */,
+				2CA0E7D91E62B73D00A826E9 /* loginVC.m in Sources */,
 				2CA0E7921E619B3F00A826E9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,7 +511,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -529,7 +553,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -622,7 +646,7 @@
 				2CA0E7B91E619B3F00A826E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		2CA0E7BA1E619B3F00A826E9 /* Build configuration list for PBXNativeTarget "intelligentFloor" */ = {
 			isa = XCConfigurationList;
@@ -631,7 +655,7 @@
 				2CA0E7BC1E619B3F00A826E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		2CA0E7BD1E619B3F00A826E9 /* Build configuration list for PBXNativeTarget "intelligentFloorTests" */ = {
 			isa = XCConfigurationList;
@@ -640,7 +664,7 @@
 				2CA0E7BF1E619B3F00A826E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		2CA0E7C01E619B3F00A826E9 /* Build configuration list for PBXNativeTarget "intelligentFloorUITests" */ = {
 			isa = XCConfigurationList;
@@ -649,7 +673,7 @@
 				2CA0E7C21E619B3F00A826E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

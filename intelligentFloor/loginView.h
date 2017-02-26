@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <JVFloatLabeledTextField/JVFloatLabeledTextField.h>
 
 @interface loginView : UIView
+
+@property (nonatomic ,strong) JVFloatLabeledTextField *nameTxt;
+@property (nonatomic ,strong) JVFloatLabeledTextField *passwdTxt;
+@property (nonatomic, strong) UIButton *loginBtn_normal;
+@property (nonatomic, strong) UIButton *loginBtn_touchID;
 
 @end

@@ -8,20 +8,56 @@
 
 #import "ViewController.h"
 #import "PNChart.h"
-#import "loginView.h"
+#import "stepStVC.h"
+#import "peopleStVC.h"
+#import "waringVC.h"
+
 
 @interface ViewController ()
 
+@property (strong, nonatomic) UITabBarController *contentTabBarController;
 
 @end
 
 @implementation ViewController
 
+-(UITabBarController *)contentTabBarController
+{
+    if (!_contentTabBarController)
+    {
+        _contentTabBarController = [[UITabBarController alloc] init];
+        stepStVC *stepVC  = [[stepStVC alloc] init];
+        peopleStVC *peopleVC = [[peopleStVC alloc] init];
+        waringVC *warningVC = [[waringVC alloc] init];
+        UINavigationController *stepNC = [[UINavigationController alloc] initWithRootViewController:stepVC];
+        stepNC.navigationBar.translucent = NO;
+        UINavigationController *peopleNC = [[UINavigationController alloc] initWithRootViewController:peopleVC];
+        peopleNC.navigationBar.translucent = NO;
+        UINavigationController *warningNC = [[UINavigationController alloc] initWithRootViewController:warningVC];
+        warningNC.navigationBar.translucent = NO;
+        _contentTabBarController.viewControllers = [[NSArray alloc] initWithObjects:stepNC, peopleNC, warningNC, nil];
+        
+//        UIImage *userImgNormal  = [[UIImage imageNamed:@"user_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//        UIImage *userImghighlight = [[UIImage imageNamed:@"user_highlight"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//        UIImage *homeImgNormal = [[UIImage imageNamed:@"notepad_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//        UIImage *homeImghighlight = [[UIImage imageNamed:@"notepad_highlight"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        
+        stepNC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"步数统计" image:nil selectedImage:nil];
+        peopleNC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"人流统计" image:nil selectedImage:nil];
+        warningNC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"防盗预警" image:nil selectedImage:nil];
+        
+        _contentTabBarController.tabBar.tintColor = LogoColor;
+    }
+    return _contentTabBarController;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    loginView *log = [[loginView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    [self.view addSubview:log];
+    
+    [self addChildViewController:self.contentTabBarController];
+    [self.view addSubview:self.contentTabBarController.view];
+
     
 }
 
