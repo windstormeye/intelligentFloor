@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "PNChart.h"
+#import "loginView.h"
 
 @interface ViewController ()
+
 
 @end
 
@@ -16,7 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    loginView *log = [[loginView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    [self.view addSubview:log];
+    
 }
 
 

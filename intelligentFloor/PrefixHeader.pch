@@ -1,0 +1,18 @@
+//
+//  PrefixHeader.pch
+//  intelligentFloor
+//
+//  Created by #incloud on 17/2/26.
+//  Copyright © 2017年 #incloud. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define SCREEM_HEIGHT [[UIScreen mainScreen] bounds].size.height
+#define SCREEM_WIDTH [[UIScreen mainScreen] bounds].size.width
+
+#define DeepSkyBlue [UIColor colorWithRed:0 green:191/255.0 blue:1 alpha:1.0]
+#define CornflowerBlue [UIColor colorWithRed:100/255.0 green:149/255.0 blue:237/255.0 alpha:1.0]
+
+#endif /* PrefixHeader_pch */

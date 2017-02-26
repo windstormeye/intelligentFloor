@@ -10,11 +10,14 @@
 		2CA0E7921E619B3F00A826E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7911E619B3F00A826E9 /* main.m */; };
 		2CA0E7951E619B3F00A826E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7941E619B3F00A826E9 /* AppDelegate.m */; };
 		2CA0E7981E619B3F00A826E9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7971E619B3F00A826E9 /* ViewController.m */; };
-		2CA0E79B1E619B3F00A826E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA0E7991E619B3F00A826E9 /* Main.storyboard */; };
 		2CA0E79D1E619B3F00A826E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA0E79C1E619B3F00A826E9 /* Assets.xcassets */; };
 		2CA0E7A01E619B3F00A826E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA0E79E1E619B3F00A826E9 /* LaunchScreen.storyboard */; };
 		2CA0E7AB1E619B3F00A826E9 /* intelligentFloorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7AA1E619B3F00A826E9 /* intelligentFloorTests.m */; };
 		2CA0E7B61E619B3F00A826E9 /* intelligentFloorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7B51E619B3F00A826E9 /* intelligentFloorUITests.m */; };
+		2CA0E7CB1E62656900A826E9 /* loginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7CA1E62656900A826E9 /* loginView.m */; };
+		2CA0E7CD1E6266F400A826E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA0E7CC1E6266F400A826E9 /* Main.storyboard */; };
+		2CA0E7D61E62922600A826E9 /* UIView+YSTextInputKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7D51E62922600A826E9 /* UIView+YSTextInputKeyboard.m */; };
+		74955E46FA1AF1C81784144F /* libPods-intelligentFloor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 745F5F86E6C0A356D9EACCF2 /* libPods-intelligentFloor.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +44,6 @@
 		2CA0E7941E619B3F00A826E9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2CA0E7961E619B3F00A826E9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2CA0E7971E619B3F00A826E9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		2CA0E79A1E619B3F00A826E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2CA0E79C1E619B3F00A826E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CA0E79F1E619B3F00A826E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CA0E7A11E619B3F00A826E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +53,15 @@
 		2CA0E7B11E619B3F00A826E9 /* intelligentFloorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = intelligentFloorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA0E7B51E619B3F00A826E9 /* intelligentFloorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = intelligentFloorUITests.m; sourceTree = "<group>"; };
 		2CA0E7B71E619B3F00A826E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CA0E7C91E62656900A826E9 /* loginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginView.h; sourceTree = "<group>"; };
+		2CA0E7CA1E62656900A826E9 /* loginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginView.m; sourceTree = "<group>"; };
+		2CA0E7CC1E6266F400A826E9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2CA0E7CE1E62694900A826E9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		2CA0E7D41E62922600A826E9 /* UIView+YSTextInputKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YSTextInputKeyboard.h"; sourceTree = "<group>"; };
+		2CA0E7D51E62922600A826E9 /* UIView+YSTextInputKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YSTextInputKeyboard.m"; sourceTree = "<group>"; };
+		31AC3312BA98114DA396568B /* Pods-intelligentFloor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligentFloor.release.xcconfig"; path = "Pods/Target Support Files/Pods-intelligentFloor/Pods-intelligentFloor.release.xcconfig"; sourceTree = "<group>"; };
+		745F5F86E6C0A356D9EACCF2 /* libPods-intelligentFloor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-intelligentFloor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5CB5BF37732249F352C73B3 /* Pods-intelligentFloor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligentFloor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-intelligentFloor/Pods-intelligentFloor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74955E46FA1AF1C81784144F /* libPods-intelligentFloor.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +97,8 @@
 				2CA0E7A91E619B3F00A826E9 /* intelligentFloorTests */,
 				2CA0E7B41E619B3F00A826E9 /* intelligentFloorUITests */,
 				2CA0E78E1E619B3F00A826E9 /* Products */,
+				6872581C461BFBB3357B1F48 /* Pods */,
+				8F6E4BF92CDF5AAD71BA7D7A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +115,9 @@
 		2CA0E78F1E619B3F00A826E9 /* intelligentFloor */ = {
 			isa = PBXGroup;
 			children = (
-				2CA0E7931E619B3F00A826E9 /* AppDelegate.h */,
-				2CA0E7941E619B3F00A826E9 /* AppDelegate.m */,
-				2CA0E7961E619B3F00A826E9 /* ViewController.h */,
-				2CA0E7971E619B3F00A826E9 /* ViewController.m */,
-				2CA0E7991E619B3F00A826E9 /* Main.storyboard */,
-				2CA0E79C1E619B3F00A826E9 /* Assets.xcassets */,
-				2CA0E79E1E619B3F00A826E9 /* LaunchScreen.storyboard */,
-				2CA0E7A11E619B3F00A826E9 /* Info.plist */,
+				2CA0E7C41E62621800A826E9 /* Other */,
+				2CA0E7C31E62620A00A826E9 /* Controller */,
+				2CA0E7C51E62623300A826E9 /* View */,
 				2CA0E7901E619B3F00A826E9 /* Supporting Files */,
 			);
 			path = intelligentFloor;
@@ -140,6 +149,65 @@
 			path = intelligentFloorUITests;
 			sourceTree = "<group>";
 		};
+		2CA0E7C31E62620A00A826E9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2CA0E7961E619B3F00A826E9 /* ViewController.h */,
+				2CA0E7971E619B3F00A826E9 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2CA0E7C41E62621800A826E9 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				2CA0E79C1E619B3F00A826E9 /* Assets.xcassets */,
+				2CA0E7A11E619B3F00A826E9 /* Info.plist */,
+				2CA0E7931E619B3F00A826E9 /* AppDelegate.h */,
+				2CA0E7941E619B3F00A826E9 /* AppDelegate.m */,
+				2CA0E7CE1E62694900A826E9 /* PrefixHeader.pch */,
+				2CA0E7D31E62922600A826E9 /* Lib */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		2CA0E7C51E62623300A826E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2CA0E79E1E619B3F00A826E9 /* LaunchScreen.storyboard */,
+				2CA0E7CC1E6266F400A826E9 /* Main.storyboard */,
+				2CA0E7C91E62656900A826E9 /* loginView.h */,
+				2CA0E7CA1E62656900A826E9 /* loginView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2CA0E7D31E62922600A826E9 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				2CA0E7D41E62922600A826E9 /* UIView+YSTextInputKeyboard.h */,
+				2CA0E7D51E62922600A826E9 /* UIView+YSTextInputKeyboard.m */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		6872581C461BFBB3357B1F48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F5CB5BF37732249F352C73B3 /* Pods-intelligentFloor.debug.xcconfig */,
+				31AC3312BA98114DA396568B /* Pods-intelligentFloor.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8F6E4BF92CDF5AAD71BA7D7A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				745F5F86E6C0A356D9EACCF2 /* libPods-intelligentFloor.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +215,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CA0E7BA1E619B3F00A826E9 /* Build configuration list for PBXNativeTarget "intelligentFloor" */;
 			buildPhases = (
+				F6FCE0519509817BCBB93E6B /* [CP] Check Pods Manifest.lock */,
 				2CA0E7891E619B3F00A826E9 /* Sources */,
 				2CA0E78A1E619B3F00A826E9 /* Frameworks */,
 				2CA0E78B1E619B3F00A826E9 /* Resources */,
+				F30B4499E5644B1DAD269BF5 /* [CP] Embed Pods Frameworks */,
+				9B07FF08F20C873BA83C97D6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,9 +320,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CA0E7CD1E6266F400A826E9 /* Main.storyboard in Resources */,
 				2CA0E7A01E619B3F00A826E9 /* LaunchScreen.storyboard in Resources */,
 				2CA0E79D1E619B3F00A826E9 /* Assets.xcassets in Resources */,
-				2CA0E79B1E619B3F00A826E9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,13 +342,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9B07FF08F20C873BA83C97D6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-intelligentFloor/Pods-intelligentFloor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F30B4499E5644B1DAD269BF5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-intelligentFloor/Pods-intelligentFloor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6FCE0519509817BCBB93E6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2CA0E7891E619B3F00A826E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2CA0E7981E619B3F00A826E9 /* ViewController.m in Sources */,
+				2CA0E7D61E62922600A826E9 /* UIView+YSTextInputKeyboard.m in Sources */,
 				2CA0E7951E619B3F00A826E9 /* AppDelegate.m in Sources */,
+				2CA0E7CB1E62656900A826E9 /* loginView.m in Sources */,
 				2CA0E7921E619B3F00A826E9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,14 +435,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2CA0E7991E619B3F00A826E9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2CA0E79A1E619B3F00A826E9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2CA0E79E1E619B3F00A826E9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -363,6 +476,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = intelligentFloor/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -408,6 +522,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = intelligentFloor/PrefixHeader.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -423,6 +538,7 @@
 		};
 		2CA0E7BB1E619B3F00A826E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5CB5BF37732249F352C73B3 /* Pods-intelligentFloor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U6J5965DZK;
@@ -435,6 +551,7 @@
 		};
 		2CA0E7BC1E619B3F00A826E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31AC3312BA98114DA396568B /* Pods-intelligentFloor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U6J5965DZK;
@@ -514,6 +631,7 @@
 				2CA0E7BC1E619B3F00A826E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CA0E7BD1E619B3F00A826E9 /* Build configuration list for PBXNativeTarget "intelligentFloorTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +640,7 @@
 				2CA0E7BF1E619B3F00A826E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CA0E7C01E619B3F00A826E9 /* Build configuration list for PBXNativeTarget "intelligentFloorUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +649,7 @@
 				2CA0E7C21E619B3F00A826E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
