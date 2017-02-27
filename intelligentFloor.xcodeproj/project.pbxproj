@@ -20,7 +20,9 @@
 		2CA0E7D91E62B73D00A826E9 /* loginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7D81E62B73D00A826E9 /* loginVC.m */; };
 		2CA0E7DC1E62BCAA00A826E9 /* stepStVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7DB1E62BCAA00A826E9 /* stepStVC.m */; };
 		2CA0E7DF1E62BCB800A826E9 /* peopleStVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7DE1E62BCB800A826E9 /* peopleStVC.m */; };
-		2CA0E7E21E62BCCB00A826E9 /* waringVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7E11E62BCCB00A826E9 /* waringVC.m */; };
+		2CA0E7E81E63CA3300A826E9 /* PopoverSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7E51E63CA3300A826E9 /* PopoverSelector.m */; };
+		2CA0E7E91E63CA3300A826E9 /* TimeRangePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7E71E63CA3300A826E9 /* TimeRangePicker.m */; };
+		2CA0E7EC1E63CCF000A826E9 /* settingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7EB1E63CCF000A826E9 /* settingVC.m */; };
 		74955E46FA1AF1C81784144F /* libPods-intelligentFloor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 745F5F86E6C0A356D9EACCF2 /* libPods-intelligentFloor.a */; };
 /* End PBXBuildFile section */
 
@@ -69,8 +71,12 @@
 		2CA0E7DB1E62BCAA00A826E9 /* stepStVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = stepStVC.m; sourceTree = "<group>"; };
 		2CA0E7DD1E62BCB800A826E9 /* peopleStVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = peopleStVC.h; sourceTree = "<group>"; };
 		2CA0E7DE1E62BCB800A826E9 /* peopleStVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = peopleStVC.m; sourceTree = "<group>"; };
-		2CA0E7E01E62BCCB00A826E9 /* waringVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = waringVC.h; sourceTree = "<group>"; };
-		2CA0E7E11E62BCCB00A826E9 /* waringVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = waringVC.m; sourceTree = "<group>"; };
+		2CA0E7E41E63CA3300A826E9 /* PopoverSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverSelector.h; sourceTree = "<group>"; };
+		2CA0E7E51E63CA3300A826E9 /* PopoverSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverSelector.m; sourceTree = "<group>"; };
+		2CA0E7E61E63CA3300A826E9 /* TimeRangePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeRangePicker.h; sourceTree = "<group>"; };
+		2CA0E7E71E63CA3300A826E9 /* TimeRangePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeRangePicker.m; sourceTree = "<group>"; };
+		2CA0E7EA1E63CCF000A826E9 /* settingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingVC.h; sourceTree = "<group>"; };
+		2CA0E7EB1E63CCF000A826E9 /* settingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingVC.m; sourceTree = "<group>"; };
 		31AC3312BA98114DA396568B /* Pods-intelligentFloor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligentFloor.release.xcconfig"; path = "Pods/Target Support Files/Pods-intelligentFloor/Pods-intelligentFloor.release.xcconfig"; sourceTree = "<group>"; };
 		745F5F86E6C0A356D9EACCF2 /* libPods-intelligentFloor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-intelligentFloor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CB5BF37732249F352C73B3 /* Pods-intelligentFloor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligentFloor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-intelligentFloor/Pods-intelligentFloor.debug.xcconfig"; sourceTree = "<group>"; };
@@ -172,8 +178,8 @@
 				2CA0E7DB1E62BCAA00A826E9 /* stepStVC.m */,
 				2CA0E7DD1E62BCB800A826E9 /* peopleStVC.h */,
 				2CA0E7DE1E62BCB800A826E9 /* peopleStVC.m */,
-				2CA0E7E01E62BCCB00A826E9 /* waringVC.h */,
-				2CA0E7E11E62BCCB00A826E9 /* waringVC.m */,
+				2CA0E7EA1E63CCF000A826E9 /* settingVC.h */,
+				2CA0E7EB1E63CCF000A826E9 /* settingVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -186,6 +192,7 @@
 				2CA0E7931E619B3F00A826E9 /* AppDelegate.h */,
 				2CA0E7941E619B3F00A826E9 /* AppDelegate.m */,
 				2CA0E7CE1E62694900A826E9 /* PrefixHeader.pch */,
+				2CA0E7E31E63CA3300A826E9 /* TimeRangeSelector */,
 				2CA0E7D31E62922600A826E9 /* Lib */,
 			);
 			name = Other;
@@ -209,6 +216,17 @@
 				2CA0E7D51E62922600A826E9 /* UIView+YSTextInputKeyboard.m */,
 			);
 			path = Lib;
+			sourceTree = "<group>";
+		};
+		2CA0E7E31E63CA3300A826E9 /* TimeRangeSelector */ = {
+			isa = PBXGroup;
+			children = (
+				2CA0E7E41E63CA3300A826E9 /* PopoverSelector.h */,
+				2CA0E7E51E63CA3300A826E9 /* PopoverSelector.m */,
+				2CA0E7E61E63CA3300A826E9 /* TimeRangePicker.h */,
+				2CA0E7E71E63CA3300A826E9 /* TimeRangePicker.m */,
+			);
+			path = TimeRangeSelector;
 			sourceTree = "<group>";
 		};
 		6872581C461BFBB3357B1F48 /* Pods */ = {
@@ -417,7 +435,9 @@
 			files = (
 				2CA0E7981E619B3F00A826E9 /* ViewController.m in Sources */,
 				2CA0E7D61E62922600A826E9 /* UIView+YSTextInputKeyboard.m in Sources */,
-				2CA0E7E21E62BCCB00A826E9 /* waringVC.m in Sources */,
+				2CA0E7E81E63CA3300A826E9 /* PopoverSelector.m in Sources */,
+				2CA0E7E91E63CA3300A826E9 /* TimeRangePicker.m in Sources */,
+				2CA0E7EC1E63CCF000A826E9 /* settingVC.m in Sources */,
 				2CA0E7951E619B3F00A826E9 /* AppDelegate.m in Sources */,
 				2CA0E7CB1E62656900A826E9 /* loginView.m in Sources */,
 				2CA0E7DF1E62BCB800A826E9 /* peopleStVC.m in Sources */,

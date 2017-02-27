@@ -61,6 +61,7 @@
     JVFloatLabeledTextField *passwdTxt = [[JVFloatLabeledTextField alloc] initWithFrame:CGRectMake(nameTxt.frame.origin.x, CGRectGetMaxY(nameTxt.frame) + 5, nameTxt.frame.size.width, 40)];
     [self addSubview:passwdTxt];
     self.passwdTxt = passwdTxt;
+    passwdTxt.secureTextEntry = YES;
     passwdTxt.font = [UIFont systemFontOfSize:16];
     passwdTxt.attributedPlaceholder =
     [[NSAttributedString alloc] initWithString:NSLocalizedString(@"密码", @"")
@@ -82,13 +83,13 @@
     [self addSubview:loginBtn_normal];
     self.loginBtn_normal = loginBtn_normal;
     
-    UIButton *loginBtn_touchID = [[UIButton alloc] initWithFrame:CGRectMake(nameTxt.frame.origin.x, CGRectGetMaxY(loginBtn_normal.frame) + 5, nameTxt.frame.size.width, 35)];
-    loginBtn_touchID.backgroundColor = CornflowerBlue;
-    [loginBtn_touchID setFont:[UIFont systemFontOfSize:14]];
-    [loginBtn_touchID setTitle:@"使用指纹登录" forState:UIControlStateNormal];
-    loginBtn_touchID.layer.cornerRadius = 5;
-    [self addSubview:loginBtn_touchID];
-    self.loginBtn_touchID = loginBtn_touchID;
+//    UIButton *loginBtn_touchID = [[UIButton alloc] initWithFrame:CGRectMake(nameTxt.frame.origin.x, CGRectGetMaxY(loginBtn_normal.frame) + 5, nameTxt.frame.size.width, 35)];
+//    loginBtn_touchID.backgroundColor = CornflowerBlue;
+//    [loginBtn_touchID setFont:[UIFont systemFontOfSize:14]];
+//    [loginBtn_touchID setTitle:@"使用指纹登录" forState:UIControlStateNormal];
+//    loginBtn_touchID.layer.cornerRadius = 5;
+//    [self addSubview:loginBtn_touchID];
+//    self.loginBtn_touchID = loginBtn_touchID;
 }
 
 

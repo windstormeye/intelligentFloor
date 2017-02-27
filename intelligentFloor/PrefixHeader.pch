@@ -16,4 +16,7 @@
 #define CornflowerBlue [UIColor colorWithRed:100/255.0 green:149/255.0 blue:237/255.0 alpha:1.0]
 #define LogoColor [UIColor colorWithRed:24/255.0 green:61/255.0 blue:133/255.0 alpha:1.0]
 
+#define BASE_RANGE_TAG  10000
+
+
 #endif /* PrefixHeader_pch */
