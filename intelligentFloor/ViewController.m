@@ -36,13 +36,13 @@
         peopleNC.navigationBar.translucent = NO;
         _contentTabBarController.viewControllers = [[NSArray alloc] initWithObjects:stepNC, peopleNC, nil];
         
-//        UIImage *userImgNormal  = [[UIImage imageNamed:@"user_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//        UIImage *userImghighlight = [[UIImage imageNamed:@"user_highlight"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//        UIImage *homeImgNormal = [[UIImage imageNamed:@"notepad_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//        UIImage *homeImghighlight = [[UIImage imageNamed:@"notepad_highlight"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UIImage *peopleImgNormal  = [[UIImage imageNamed:@"三人_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UIImage *peopleImgselected = [[UIImage imageNamed:@"三人_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UIImage *stepImgNormal = [[UIImage imageNamed:@"foot_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UIImage *stepImgselected = [[UIImage imageNamed:@"step_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         
-        stepNC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"步数统计" image:nil selectedImage:nil];
-        peopleNC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"人流统计" image:nil selectedImage:nil];
+        stepNC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"步数统计" image:stepImgNormal selectedImage:stepImgselected];
+        peopleNC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"人流统计" image:peopleImgNormal selectedImage:peopleImgselected];
         
         _contentTabBarController.tabBar.tintColor = LogoColor;
     }
