@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'DC244550BB6B8F67057E5718C9B86EC8'
+               BlueprintIdentifier = '53DE108D88A115A7DB763E7A680F5524'
                BlueprintName = 'Pods-intelligentFloor'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-intelligentFloor.a'>

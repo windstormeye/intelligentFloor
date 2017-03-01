@@ -20,9 +20,12 @@
 		2CA0E7D91E62B73D00A826E9 /* loginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7D81E62B73D00A826E9 /* loginVC.m */; };
 		2CA0E7DC1E62BCAA00A826E9 /* stepStVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7DB1E62BCAA00A826E9 /* stepStVC.m */; };
 		2CA0E7DF1E62BCB800A826E9 /* peopleStVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7DE1E62BCB800A826E9 /* peopleStVC.m */; };
-		2CA0E7E81E63CA3300A826E9 /* PopoverSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7E51E63CA3300A826E9 /* PopoverSelector.m */; };
-		2CA0E7E91E63CA3300A826E9 /* TimeRangePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7E71E63CA3300A826E9 /* TimeRangePicker.m */; };
 		2CA0E7EC1E63CCF000A826E9 /* settingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7EB1E63CCF000A826E9 /* settingVC.m */; };
+		2CA0E7F71E669AA700A826E9 /* SettingsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7EE1E669AA700A826E9 /* SettingsItem.m */; };
+		2CA0E7F81E669AA700A826E9 /* MessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7F01E669AA700A826E9 /* MessageTableViewController.m */; };
+		2CA0E7F91E669AA700A826E9 /* QuietHoursTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7F21E669AA700A826E9 /* QuietHoursTableViewController.m */; };
+		2CA0E7FA1E669AA700A826E9 /* AccountSecurityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7F41E669AA700A826E9 /* AccountSecurityViewController.m */; };
+		2CA0E7FB1E669AA700A826E9 /* AlarmTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7F61E669AA700A826E9 /* AlarmTimeViewController.m */; };
 		74955E46FA1AF1C81784144F /* libPods-intelligentFloor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 745F5F86E6C0A356D9EACCF2 /* libPods-intelligentFloor.a */; };
 /* End PBXBuildFile section */
 
@@ -71,12 +74,18 @@
 		2CA0E7DB1E62BCAA00A826E9 /* stepStVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = stepStVC.m; sourceTree = "<group>"; };
 		2CA0E7DD1E62BCB800A826E9 /* peopleStVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = peopleStVC.h; sourceTree = "<group>"; };
 		2CA0E7DE1E62BCB800A826E9 /* peopleStVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = peopleStVC.m; sourceTree = "<group>"; };
-		2CA0E7E41E63CA3300A826E9 /* PopoverSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverSelector.h; sourceTree = "<group>"; };
-		2CA0E7E51E63CA3300A826E9 /* PopoverSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverSelector.m; sourceTree = "<group>"; };
-		2CA0E7E61E63CA3300A826E9 /* TimeRangePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeRangePicker.h; sourceTree = "<group>"; };
-		2CA0E7E71E63CA3300A826E9 /* TimeRangePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeRangePicker.m; sourceTree = "<group>"; };
 		2CA0E7EA1E63CCF000A826E9 /* settingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingVC.h; sourceTree = "<group>"; };
 		2CA0E7EB1E63CCF000A826E9 /* settingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingVC.m; sourceTree = "<group>"; };
+		2CA0E7ED1E669AA700A826E9 /* SettingsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsItem.h; sourceTree = "<group>"; };
+		2CA0E7EE1E669AA700A826E9 /* SettingsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsItem.m; sourceTree = "<group>"; };
+		2CA0E7EF1E669AA700A826E9 /* MessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewController.h; sourceTree = "<group>"; };
+		2CA0E7F01E669AA700A826E9 /* MessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewController.m; sourceTree = "<group>"; };
+		2CA0E7F11E669AA700A826E9 /* QuietHoursTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuietHoursTableViewController.h; sourceTree = "<group>"; };
+		2CA0E7F21E669AA700A826E9 /* QuietHoursTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuietHoursTableViewController.m; sourceTree = "<group>"; };
+		2CA0E7F31E669AA700A826E9 /* AccountSecurityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountSecurityViewController.h; sourceTree = "<group>"; };
+		2CA0E7F41E669AA700A826E9 /* AccountSecurityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountSecurityViewController.m; sourceTree = "<group>"; };
+		2CA0E7F51E669AA700A826E9 /* AlarmTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmTimeViewController.h; sourceTree = "<group>"; };
+		2CA0E7F61E669AA700A826E9 /* AlarmTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmTimeViewController.m; sourceTree = "<group>"; };
 		31AC3312BA98114DA396568B /* Pods-intelligentFloor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligentFloor.release.xcconfig"; path = "Pods/Target Support Files/Pods-intelligentFloor/Pods-intelligentFloor.release.xcconfig"; sourceTree = "<group>"; };
 		745F5F86E6C0A356D9EACCF2 /* libPods-intelligentFloor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-intelligentFloor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CB5BF37732249F352C73B3 /* Pods-intelligentFloor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligentFloor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-intelligentFloor/Pods-intelligentFloor.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,12 +183,11 @@
 				2CA0E7971E619B3F00A826E9 /* ViewController.m */,
 				2CA0E7D71E62B73D00A826E9 /* loginVC.h */,
 				2CA0E7D81E62B73D00A826E9 /* loginVC.m */,
-				2CA0E7DA1E62BCAA00A826E9 /* stepStVC.h */,
-				2CA0E7DB1E62BCAA00A826E9 /* stepStVC.m */,
 				2CA0E7DD1E62BCB800A826E9 /* peopleStVC.h */,
 				2CA0E7DE1E62BCB800A826E9 /* peopleStVC.m */,
-				2CA0E7EA1E63CCF000A826E9 /* settingVC.h */,
-				2CA0E7EB1E63CCF000A826E9 /* settingVC.m */,
+				2CA0E7DA1E62BCAA00A826E9 /* stepStVC.h */,
+				2CA0E7DB1E62BCAA00A826E9 /* stepStVC.m */,
+				2CA0E7FC1E669AE400A826E9 /* Setting */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -192,7 +200,6 @@
 				2CA0E7931E619B3F00A826E9 /* AppDelegate.h */,
 				2CA0E7941E619B3F00A826E9 /* AppDelegate.m */,
 				2CA0E7CE1E62694900A826E9 /* PrefixHeader.pch */,
-				2CA0E7E31E63CA3300A826E9 /* TimeRangeSelector */,
 				2CA0E7D31E62922600A826E9 /* Lib */,
 			);
 			name = Other;
@@ -218,15 +225,23 @@
 			path = Lib;
 			sourceTree = "<group>";
 		};
-		2CA0E7E31E63CA3300A826E9 /* TimeRangeSelector */ = {
+		2CA0E7FC1E669AE400A826E9 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				2CA0E7E41E63CA3300A826E9 /* PopoverSelector.h */,
-				2CA0E7E51E63CA3300A826E9 /* PopoverSelector.m */,
-				2CA0E7E61E63CA3300A826E9 /* TimeRangePicker.h */,
-				2CA0E7E71E63CA3300A826E9 /* TimeRangePicker.m */,
+				2CA0E7EA1E63CCF000A826E9 /* settingVC.h */,
+				2CA0E7EB1E63CCF000A826E9 /* settingVC.m */,
+				2CA0E7ED1E669AA700A826E9 /* SettingsItem.h */,
+				2CA0E7EE1E669AA700A826E9 /* SettingsItem.m */,
+				2CA0E7EF1E669AA700A826E9 /* MessageTableViewController.h */,
+				2CA0E7F01E669AA700A826E9 /* MessageTableViewController.m */,
+				2CA0E7F11E669AA700A826E9 /* QuietHoursTableViewController.h */,
+				2CA0E7F21E669AA700A826E9 /* QuietHoursTableViewController.m */,
+				2CA0E7F31E669AA700A826E9 /* AccountSecurityViewController.h */,
+				2CA0E7F41E669AA700A826E9 /* AccountSecurityViewController.m */,
+				2CA0E7F51E669AA700A826E9 /* AlarmTimeViewController.h */,
+				2CA0E7F61E669AA700A826E9 /* AlarmTimeViewController.m */,
 			);
-			path = TimeRangeSelector;
+			name = Setting;
 			sourceTree = "<group>";
 		};
 		6872581C461BFBB3357B1F48 /* Pods */ = {
@@ -435,15 +450,18 @@
 			files = (
 				2CA0E7981E619B3F00A826E9 /* ViewController.m in Sources */,
 				2CA0E7D61E62922600A826E9 /* UIView+YSTextInputKeyboard.m in Sources */,
-				2CA0E7E81E63CA3300A826E9 /* PopoverSelector.m in Sources */,
-				2CA0E7E91E63CA3300A826E9 /* TimeRangePicker.m in Sources */,
+				2CA0E7FA1E669AA700A826E9 /* AccountSecurityViewController.m in Sources */,
+				2CA0E7F91E669AA700A826E9 /* QuietHoursTableViewController.m in Sources */,
 				2CA0E7EC1E63CCF000A826E9 /* settingVC.m in Sources */,
 				2CA0E7951E619B3F00A826E9 /* AppDelegate.m in Sources */,
 				2CA0E7CB1E62656900A826E9 /* loginView.m in Sources */,
 				2CA0E7DF1E62BCB800A826E9 /* peopleStVC.m in Sources */,
+				2CA0E7F81E669AA700A826E9 /* MessageTableViewController.m in Sources */,
 				2CA0E7DC1E62BCAA00A826E9 /* stepStVC.m in Sources */,
+				2CA0E7F71E669AA700A826E9 /* SettingsItem.m in Sources */,
 				2CA0E7D91E62B73D00A826E9 /* loginVC.m in Sources */,
 				2CA0E7921E619B3F00A826E9 /* main.m in Sources */,
+				2CA0E7FB1E669AA700A826E9 /* AlarmTimeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

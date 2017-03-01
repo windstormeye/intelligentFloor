@@ -8,6 +8,7 @@
 
 #import "peopleStVC.h"
 #import "PNChart.h"
+#import "settingVC.h"
 
 @interface peopleStVC ()
 
@@ -33,6 +34,14 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.barTintColor = LogoColor;
     self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.title = @"人流统计";
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    
+    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 130, 44)];
+    UIImageView *beixingImg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, titleView.frame.size.width, titleView.frame.size.height)];
+    beixingImg.image = [UIImage imageNamed:@"logo"];
+    [titleView addSubview:beixingImg];
+    self.navigationItem.titleView = titleView;
     
     UIBarButtonItem *settingBtnItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"setting"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(settingMethon)];
     self.navigationItem.rightBarButtonItem = settingBtnItem;
@@ -46,14 +55,12 @@
     segment.selectedSegmentIndex = 0;
     [segment addTarget:self action:@selector(change:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:segment];
+    
+    [self initView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-}
-
--(void)viewWillAppear:(BOOL)animated {
-    [self initView];
 }
 
 - (void)initView {
@@ -142,7 +149,11 @@
 }
 
 - (void)settingMethon {
-    
+    settingVC *set = [[settingVC alloc] init];
+    self.hidesBottomBarWhenPushed=YES;
+    [self.navigationController pushViewController:set animated:YES];
+    self.hidesBottomBarWhenPushed=NO;
 }
+
 
 @end
