@@ -1,14 +1,9 @@
-//
-//  AlarmTimeViewController.m
-//  SettingsTask
-//
-//  Created by 徐正科 on 17/2/28.
-//  Copyright © 2017年 xzk. All rights reserved.
-//
+
 
 #import "AlarmTimeViewController.h"
 #import "JVFloatLabeledTextField/JVFloatLabeledTextField.h"
 #import "FUIButton.h"
+#import "MBProgressHUD+NJ.h"
 
 @interface AlarmTimeViewController ()
 {
@@ -19,6 +14,8 @@
 }
 
 @property (nonatomic, strong) UIView *topView;
+@property (nonatomic, strong) UIBarButtonItem *rightBtnItem;
+
 @end
 
 @implementation AlarmTimeViewController
@@ -37,7 +34,7 @@
     
     UIButton *cancleBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, (topView.frame.size.height - 10)/2, 60, 30)];
     [cancleBtn setTitle:@"取消" forState:UIControlStateNormal];
-    [cancleBtn setFont:[UIFont systemFontOfSize:18]];
+    [cancleBtn setFont:[UIFont systemFontOfSize:17]];
     [cancleBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [topView addSubview:cancleBtn];
     [cancleBtn addTarget:self action:@selector(cancelBtnClick) forControlEvents:UIControlEventTouchUpInside];
@@ -79,6 +76,10 @@
     _endBtn.cornerRadius = 5.0f;
     _endBtn.titleLabel.font = [UIFont systemFontOfSize:16];
     [_endBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
+    UIBarButtonItem *rightBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"存储" style:UIBarButtonItemStylePlain target:self action:@selector(saveBtnClick)];
+    self.navigationItem.rightBarButtonItem = rightBtnItem;
+    self.rightBtnItem = rightBtnItem;
     
     //设置显示格式
     //默认根据手机本地设置显示为中文还是其他语言
@@ -132,11 +133,31 @@
 }
 
 - (void)saveBtnClick {
-    [self dismissViewControllerAnimated:YES completion:^{
-        // 在这里写下上传至服务器的代码
-        [[NSUserDefaults standardUserDefaults] setObject:[_beginBtn currentTitle] forKey:@"beginTimeString"];
-        [[NSUserDefaults standardUserDefaults] setObject:[_endBtn currentTitle] forKey:@"endTimeString"];
-    }];
+   
+    NSArray *viewcontrollers=self.navigationController.viewControllers;
+    // 如果栈大于1，说明为push进来的
+    if (viewcontrollers.count>1) {
+        if ([viewcontrollers objectAtIndex:viewcontrollers.count-1]==self) {
+            self.topView.hidden = YES;
+            _beginTime.frame = CGRectMake(0, 0, SCREEM_WIDTH, SCREEM_HEIGHT * 0.4);
+            [[NSUserDefaults standardUserDefaults] setObject:[_beginBtn currentTitle] forKey:@"beginTimeString"];
+            [[NSUserDefaults standardUserDefaults] setObject:[_endBtn currentTitle] forKey:@"endTimeString"];
+            [MBProgressHUD showSuccess:@"修改成功"];
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+    }
+    // 否则为present进来的
+    else{
+        self.topView.hidden = NO;
+        [self dismissViewControllerAnimated:YES completion:^{
+            // 在这里写下上传至服务器的代码
+            [[NSUserDefaults standardUserDefaults] setObject:[_beginBtn currentTitle] forKey:@"beginTimeString"];
+            [[NSUserDefaults standardUserDefaults] setObject:[_endBtn currentTitle] forKey:@"endTimeString"];
+            [MBProgressHUD showSuccess:@"修改成功"];
+        }];
+        
+    }
+    
 }
 
 - (void)beginDatePickerClick {

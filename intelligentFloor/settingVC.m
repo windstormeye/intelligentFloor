@@ -1,10 +1,4 @@
-//
-//  settingVC.m
-//  intelligentFloor
-//
-//  Created by #incloud on 17/2/27.
-//  Copyright © 2017年 #incloud. All rights reserved.
-//
+
 
 #import "settingVC.h"
 #import "SettingsItem.h"
@@ -12,6 +6,7 @@
 #import "QuietHoursTableViewController.h"
 #import "AccountSecurityViewController.h"
 #import "AlarmTimeViewController.h"
+#import "loginVC.h"
 
 @interface settingVC () <UITableViewDelegate,UITableViewDataSource> {
     NSArray *_dataArray;
@@ -93,7 +88,9 @@
 }
 
 -(void)quit{
-    NSLog(@"已退出");
+    loginVC *login = [[loginVC alloc] init];
+    [self presentViewController:login animated:YES completion:nil];
+    NSLog(@"111");
 }
 
 - (void)didReceiveMemoryWarning {

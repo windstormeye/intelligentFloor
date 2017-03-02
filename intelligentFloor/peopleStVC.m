@@ -1,10 +1,4 @@
-//
-//  peopleStVC.m
-//  intelligentFloor
-//
-//  Created by #incloud on 17/2/26.
-//  Copyright © 2017年 #incloud. All rights reserved.
-//
+
 
 #import "peopleStVC.h"
 #import "PNChart.h"
@@ -12,7 +6,7 @@
 
 @interface peopleStVC ()
 
-@property (nonatomic, strong) UIView *PNchartView;
+@property (nonatomic, strong) UIView *PNchartView;  // 
 @property (nonatomic, strong) PNLineChart *dayLineChart;
 @property (nonatomic, strong) PNLineChart *weekLineChart;
 @property (nonatomic, strong) PNLineChart *monthLineChart;

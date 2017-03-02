@@ -1,10 +1,4 @@
-//
-//  PrefixHeader.pch
-//  intelligentFloor
-//
-//  Created by #incloud on 17/2/26.
-//  Copyright © 2017年 #incloud. All rights reserved.
-//
+
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch

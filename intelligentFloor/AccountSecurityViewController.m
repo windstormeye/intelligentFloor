@@ -1,14 +1,8 @@
-//
-//  AccountSecurityViewController.m
-//  SettingsTask
-//
-//  Created by 徐正科 on 17/2/28.
-//  Copyright © 2017年 xzk. All rights reserved.
-//
 
 #import "AccountSecurityViewController.h"
 #import "FUITextField.h"
 #import "FUIButton.h"
+#import "MBProgressHUD+NJ.h"
 
 @interface AccountSecurityViewController ()
 {
@@ -20,6 +14,7 @@
 @property (nonatomic, strong) FUITextField *originalTxt;
 @property (nonatomic, strong) FUITextField *nowTxt;
 @property (nonatomic, strong) FUITextField *nowAgainTxt;
+@property (nonatomic, strong) MBProgressHUD *hud;
 
 @end
 
@@ -38,6 +33,7 @@
     FUITextField *originalTxt = [[FUITextField alloc] initWithFrame:CGRectMake((SCREEM_WIDTH - SCREEM_WIDTH * 0.8)/2, SCREEM_HEIGHT * 0.05, SCREEM_WIDTH * 0.8, 40)];
     [self.view addSubview:originalTxt];
     self.originalTxt = originalTxt;
+    originalTxt.secureTextEntry = YES;
     originalTxt.placeholder = @"原密码";
     originalTxt.font = [UIFont systemFontOfSize:16];
     originalTxt.backgroundColor = [UIColor clearColor];
@@ -87,7 +83,34 @@
 
 // 确定按钮点击事件
 - (void)confirmBtnClick {
+    NSString *originalStr = [NSString stringWithString:self.originalTxt.text];
+    NSString *nowStr = [NSString stringWithString:self.nowTxt.text];
+    NSString *nowAgainStr = [NSString stringWithString:self.nowAgainTxt.text];
     
+    if ([originalStr  isEqualToString: @""]) {
+        [MBProgressHUD showError:@"请输入原密码"];
+    } else {
+        if ([originalStr isEqualToString:[[NSUserDefaults standardUserDefaults] objectForKey:@"user_passwd"]]) {
+            if ([nowStr isEqual:@""]) {
+                [MBProgressHUD showError:@"请输入修改后的密码"];
+            } else {
+                if ([nowStr isEqualToString:nowAgainStr]) {
+                    if ([nowStr isEqualToString:originalStr]) {
+                        [MBProgressHUD showError:@"与原密码不能相同"];
+                    } else {
+                        [[NSUserDefaults standardUserDefaults] setObject:nowStr forKey:@"user_passwd"];
+                        [MBProgressHUD showSuccess:@"修改成功"];
+                        [self.navigationController popViewControllerAnimated:YES];
+                        // 上传服务器
+                    }
+                } else {
+                    [MBProgressHUD showError:@"两次密码输入不同"];
+                }
+            }
+        } else {
+        [MBProgressHUD showError:@"原密码不服"];
+        }
+    }
 }
 
 
