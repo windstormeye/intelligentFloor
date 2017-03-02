@@ -35,9 +35,9 @@
     [self.view addSubview:topView];
     self.topView = topView;
     
-    UIButton *cancleBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, (topView.frame.size.height - 10)/2, 60, 30)];
+    UIButton *cancleBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, (topView.frame.size.height - 10)/2, 60, 30)];
     [cancleBtn setTitle:@"取消" forState:UIControlStateNormal];
-    [cancleBtn setFont:[UIFont systemFontOfSize:22]];
+    [cancleBtn setFont:[UIFont systemFontOfSize:18]];
     [cancleBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [topView addSubview:cancleBtn];
     [cancleBtn addTarget:self action:@selector(cancelBtnClick) forControlEvents:UIControlEventTouchUpInside];
@@ -47,6 +47,7 @@
     saveBtn.font = cancleBtn.font;
     [saveBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [topView addSubview:saveBtn];
+    [saveBtn addTarget:self action:@selector(saveBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     _beginTime = [[UIDatePicker alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(topView.frame), SCREEM_WIDTH, SCREEM_HEIGHT * 0.4)];
     [self.view addSubview:_beginTime];
@@ -62,24 +63,22 @@
     [_beginBtn setTitle:@"设定起始时间" forState:UIControlStateNormal];
     [_beginBtn addTarget:self action:@selector(beginDatePickerClick) forControlEvents:UIControlEventTouchUpInside];
     _beginBtn.buttonColor = LogoColor;
-    _beginBtn.shadowColor = [UIColor colorWithRed:105/255.0 green:105/255.0 blue:105/255.0 alpha:1];
-    _beginBtn.shadowHeight = 3.0f;
-    _beginBtn.cornerRadius = 6.0f;
-    _beginBtn.titleLabel.font = [UIFont systemFontOfSize:18];
+    _beginBtn.shadowColor = [UIColor lightGrayColor];
+    _beginBtn.shadowHeight = 1.5f;
+    _beginBtn.cornerRadius = 5.0f;
+    _beginBtn.titleLabel.font = [UIFont systemFontOfSize:16];
     [_beginBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [_beginBtn setTitleColor:[UIColor lightTextColor] forState:UIControlStateHighlighted];
     
     _endBtn = [[FUIButton alloc] initWithFrame:CGRectMake(_beginBtn.frame.origin.x, CGRectGetMaxY(_beginBtn.frame) + 20, _beginBtn.frame.size.width, _beginBtn.frame.size.height)];
     [self.view addSubview:_endBtn];
     [_endBtn setTitle:@"设定结束时间" forState:UIControlStateNormal];
     [_endBtn addTarget:self action:@selector(endDatePickerClick) forControlEvents:UIControlEventTouchUpInside];
     _endBtn.buttonColor = LogoColor;
-    _endBtn.shadowColor = [UIColor colorWithRed:105/255.0 green:105/255.0 blue:105/255.0 alpha:1];
-    _endBtn.shadowHeight = 3.0f;
-    _endBtn.cornerRadius = 6.0f;
-    _endBtn.titleLabel.font = [UIFont systemFontOfSize:18];
+    _endBtn.shadowColor = [UIColor lightGrayColor];
+    _endBtn.shadowHeight = 1.5f;
+    _endBtn.cornerRadius = 5.0f;
+    _endBtn.titleLabel.font = [UIFont systemFontOfSize:16];
     [_endBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [_endBtn setTitleColor:[UIColor lightTextColor] forState:UIControlStateHighlighted];
     
     //设置显示格式
     //默认根据手机本地设置显示为中文还是其他语言
@@ -106,13 +105,23 @@
 //    _beginTime.minimumDate = localDate;
 //    _beginTime.maximumDate = maxDate;
     
+
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"beginTimeString"]) {
+        [_beginBtn setTitle:[[NSUserDefaults standardUserDefaults] objectForKey:@"beginTimeString"] forState:UIControlStateNormal];
+        [_endBtn setTitle:[[NSUserDefaults standardUserDefaults] objectForKey:@"endTimeString"] forState:UIControlStateNormal];
+    }
+    
+    // 判断当前页面是push还是present进来的
+    // 拿到当前导航视图控制器栈
     NSArray *viewcontrollers=self.navigationController.viewControllers;
+    // 如果栈大于1，说明为push进来的
     if (viewcontrollers.count>1) {
         if ([viewcontrollers objectAtIndex:viewcontrollers.count-1]==self) {
             self.topView.hidden = YES;
             _beginTime.frame = CGRectMake(0, 0, SCREEM_WIDTH, SCREEM_HEIGHT * 0.4);
         }
     }
+    // 否则为present进来的
     else{
         self.topView.hidden = NO;
     }
@@ -125,6 +134,8 @@
 - (void)saveBtnClick {
     [self dismissViewControllerAnimated:YES completion:^{
         // 在这里写下上传至服务器的代码
+        [[NSUserDefaults standardUserDefaults] setObject:[_beginBtn currentTitle] forKey:@"beginTimeString"];
+        [[NSUserDefaults standardUserDefaults] setObject:[_endBtn currentTitle] forKey:@"endTimeString"];
     }];
 }
 
@@ -139,7 +150,7 @@
 -(NSString *)changeBeginTime{
     NSDate *pickerDate = [_beginTime date];// 获取用户通过UIDatePicker设置的日期和时间
     NSDateFormatter *pickerFormatter = [[NSDateFormatter alloc] init];// 创建一个日期格式器
-    [pickerFormatter setDateFormat:@"yyyy年MM月dd日HH:mm:ss"];
+    [pickerFormatter setDateFormat:@"yyyy年MM月dd日HH:mm"];
     NSString *dateString = [pickerFormatter stringFromDate:pickerDate];
 
     return dateString;
