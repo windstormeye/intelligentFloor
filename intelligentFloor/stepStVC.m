@@ -1,36 +1,26 @@
-
 #import "stepStVC.h"
-
 
 @interface stepStVC ()  {
     SystemSoundID soundID;
 }
 
-@property (nonatomic, strong) dispatch_source_t timer;
-@property (strong, nonatomic) UIButton *button;
-@property (strong, nonatomic) UILabel *allStepNum;
-@property (strong, nonatomic) UILabel *nowStepNum;
+@property (nonatomic, strong) dispatch_source_t timer;    // 计时器
+@property (strong, nonatomic) UIButton *button;    // 测试预警功能的按钮
+@property (strong, nonatomic) UILabel *allStepNum;    // 总步数Label
+@property (strong, nonatomic) UILabel *nowStepNum;    // 当前步数Label
 
-@property (nonatomic, strong) NSArray *pointArr;
-@property (nonatomic, strong) NSArray *yArr;
-@property (nonatomic, strong) NSArray *xArr;
+@property (nonatomic, strong) NSArray *yArr;    // 记录Y轴数据
+@property (nonatomic, strong) NSArray *xArr;    // 记录X轴数据
 
-@property (nonatomic, strong) BEMSimpleLineGraphView *myGraph;
+@property (nonatomic, strong) BEMSimpleLineGraphView *myGraph;    // 数据分布图
 
 @end
 
 @implementation stepStVC
 
-- (NSArray *)pointArr {
-    if (!_pointArr) {
-        _pointArr = [[NSArray alloc] init];
-    }
-    return _pointArr;
-}
-
 - (NSArray *)yArr {
     if (!_yArr) {
-        // 优先初始化成日步数
+        // 优先初始化 日 步数
         _yArr = @[@30, @54, @76, @262, @766, @877, @1200, @355];
         // 使用KVO方式优先直接计算出总和
         NSNumber *sum = [_yArr valueForKeyPath:@"@sum.self"];
@@ -41,9 +31,14 @@
 
 - (NSArray *)xArr {
     if (!_xArr) {
+        // 优先初始化 日 人流数
         _xArr = @[@"0",@"3",@"6",@"9",@"12", @"15", @"18", @"21h"];
     }
     return _xArr;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
 }
 
 - (void)viewDidLoad {
@@ -54,6 +49,7 @@
     self.navigationItem.title = @"步数统计";
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
    
+    // 设置navigationController的titleView
     UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 130, 44)];
     UIImageView *beixingImg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, titleView.frame.size.width, titleView.frame.size.height)];
     beixingImg.image = [UIImage imageNamed:@"logo"];
@@ -65,6 +61,7 @@
     UIBarButtonItem *warningBtnItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"warning_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(warningMethon)];
     self.navigationItem.leftBarButtonItem = warningBtnItem;
     
+    // 修改plist文件中相关参数后，加上该代码，把状态栏变为亮色
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 
     // 隐藏navigationBar顶部分割线
@@ -84,7 +81,7 @@
         }
     }
 
-    
+    //把该按钮显示出来即可体现预警功能
 //    self.button = [UIButton buttonWithType:UIButtonTypeCustom];
 //    self.button.frame = CGRectMake(50, 0, 80, 50);
 //    self.button.backgroundColor = [UIColor blueColor];
@@ -92,16 +89,17 @@
 //    [self.button setTitle:@"开始" forState:UIControlStateNormal];
 //    [self.view addSubview:self.button];
 
-//    [self initView];
     [self initChart];
 }
 
-
+// 初始化数据分布图
 - (void)initChart {
+    // 存放总步数和当前步数Label的view
     UIView * topView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEM_WIDTH, 70)];
     topView.backgroundColor = LogoColor;
     [self.view addSubview:topView];
     
+    // 总步数 标题Label
     UILabel *allStepNumLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 70, 20)];
     allStepNumLabel.text = @"总步数";
     allStepNumLabel.textAlignment = NSTextAlignmentLeft;
@@ -110,6 +108,7 @@
     allStepNumLabel.textColor = [UIColor whiteColor];
     [topView addSubview:allStepNumLabel];
     
+    // 总步数 数字Label
     UILabel *allStepNum = [[UILabel alloc] initWithFrame:CGRectMake(allStepNumLabel.frame.origin.x, CGRectGetMaxY(allStepNumLabel.frame), SCREEM_WIDTH / 2, topView.frame.size.height - allStepNumLabel.frame.size.height)];
     allStepNum.textColor = [UIColor whiteColor];
     allStepNum.textAlignment = NSTextAlignmentLeft;
@@ -118,6 +117,7 @@
     allStepNum.backgroundColor = [UIColor clearColor];
     self.allStepNum = allStepNum;
     
+    // 当前步数 标题Label
     UILabel *nowStepNumLabel = [[UILabel alloc] initWithFrame:CGRectMake(SCREEM_WIDTH - allStepNumLabel.frame.size.width, 0, allStepNumLabel.frame.size.width, allStepNumLabel.frame.size.height)];
     nowStepNumLabel.text = @"当前步数";
     nowStepNumLabel.textAlignment =  NSTextAlignmentRight;
@@ -126,6 +126,7 @@
     nowStepNumLabel.textColor = [UIColor whiteColor];
     [topView addSubview:nowStepNumLabel];
     
+    // 当前步数 数字Label
     UILabel *nowStepNum = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(allStepNum.frame), allStepNum.frame.origin.y, allStepNum.frame.size.width, allStepNum.frame.size.height)];
     nowStepNum.textColor = [UIColor whiteColor];
     nowStepNum.textAlignment = NSTextAlignmentRight;
@@ -134,6 +135,7 @@
     nowStepNum.backgroundColor = [UIColor clearColor];
     self.nowStepNum = nowStepNum;
     
+    // 分割器设置
     NSArray *segmentArr = [[NSArray alloc]initWithObjects:@"日",@"周",@"月",@"年",nil];
     UISegmentedControl *segment = [[UISegmentedControl alloc]initWithItems:segmentArr];
     segment.frame = CGRectMake((SCREEM_WIDTH - SCREEM_WIDTH * 0.8) / 2, self.tabBarController.tabBar.frame.origin.y - 120, SCREEM_WIDTH * 0.8, 40);
@@ -142,6 +144,7 @@
     [segment addTarget:self action:@selector(change:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:segment];
     
+    // 数据分布图设置
     BEMSimpleLineGraphView *myGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(topView.frame), SCREEM_WIDTH, SCREEM_HEIGHT * 0.5)];
     myGraph.dataSource = self;
     myGraph.delegate = self;
@@ -149,17 +152,21 @@
     myGraph.colorTop = LogoColor;
     myGraph.colorBottom = LogoColor;
     myGraph.colorLine = [UIColor whiteColor];
+    // 是否允许用户对数据分布图进行交互
     myGraph.enableTouchReport = YES;
     myGraph.colorXaxisLabel = [UIColor whiteColor];
     self.myGraph = myGraph;
     [self.view addSubview:myGraph];
     myGraph.widthLine = 3;
+    // 是否允许用户对数据分布图进行交互时触摸的点弹出提示label
     myGraph.enablePopUpReport = YES;
+    // 是否允许用户点击数据分布图的x轴label
     myGraph.enableXAxisLabel = YES;
-//    myGraph.enableReferenceXAxisLines = YES;
+    // 数据分布图的相关动画设置
     self.myGraph.animationGraphStyle = BEMLineAnimationDraw;
     self.myGraph.lineDashPatternForReferenceYAxisLines = @[@(2),@(2)];
 
+    // 数据分布图线条下部分区域颜色渐变设置
     CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
     size_t num_locations = 2;
     CGFloat locations[2] = { 0.0, 1.0 };
@@ -170,11 +177,11 @@
     self.myGraph.gradientBottom = CGGradientCreateWithColorComponents(colorspace, components, locations, num_locations);
 }
 
+// 图表中数据点的个数
 - (NSInteger)numberOfPointsInLineGraph:(BEMSimpleLineGraphView *)graph {
-    return self.yArr.count; // 图表中数据点的个数
+    return self.yArr.count;
 }
 
-// index 参数是数据点在 X 轴上从左到右的位置索引
 - (CGFloat)lineGraph:(BEMSimpleLineGraphView *)graph valueForPointAtIndex:(NSInteger)index {
     return [self.yArr[index] floatValue];
 }
@@ -187,6 +194,7 @@
     self.nowStepNum.text = [NSString stringWithFormat:@"%@", [self.yArr objectAtIndex:index]];
 }
 
+// 防盗预警  图标动画设置
 -(void)isAnimotion {
     if([self.button.titleLabel.text isEqualToString:@"停止"]) {
         [self stopNS];
@@ -197,7 +205,7 @@
     }
 }
 
-// 调用系统铃声
+// 防盗预警  调用系统铃声
 -(void)createSystemSoundWithName:(NSString *)soundName soundType:(NSString *)soundType
 {
     NSString *path = [NSString stringWithFormat:@"/System/Library/Audio/UISounds/%@.%@",soundName,soundType];
@@ -207,7 +215,7 @@
     }
 }
 
-//加载动画
+//防盗预警  加载动画
 -(void)startNS {
     __block NSString *str =@"warning_highlight";
     //定时器开始执行的延时时间
@@ -239,16 +247,13 @@
     dispatch_resume(_timer);
 }
 
-//停止动画
+//防盗预警  停止动画
 -(void)stopNS {
     dispatch_source_cancel(_timer);
     [self.navigationItem.leftBarButtonItem setImage:[[UIImage imageNamed:@"warning_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
+// 分割器改变事件
 -(void)change:(UISegmentedControl *)sender{
     if (sender.selectedSegmentIndex == 0) {
         self.yArr = @[@30, @54, @76, @262, @766, @877, @1200, @355];
@@ -281,6 +286,7 @@
     }
 }
 
+// 设置按钮点击事件
 - (void)settingMethon {
     settingVC *set = [[settingVC alloc] init];
     self.hidesBottomBarWhenPushed=YES;
@@ -288,6 +294,7 @@
     self.hidesBottomBarWhenPushed=NO;
 }
 
+// 防盗预警按钮点击事件
 - (void)warningMethon {
     AlarmTimeViewController *alarm = [[AlarmTimeViewController alloc] init];
 

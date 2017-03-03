@@ -133,7 +133,6 @@
 }
 
 - (void)saveBtnClick {
-   
     NSArray *viewcontrollers=self.navigationController.viewControllers;
     // 如果栈大于1，说明为push进来的
     if (viewcontrollers.count>1) {
@@ -160,10 +159,12 @@
     
 }
 
+// 设置防盗预警起始按钮点击事件
 - (void)beginDatePickerClick {
     [_beginBtn setTitle:[self changeBeginTime] forState:UIControlStateNormal];
 }
 
+// 设置防盗预警结束按钮点击事件
 - (void)endDatePickerClick {
     [_endBtn setTitle:[self changeBeginTime] forState:UIControlStateNormal];
 }

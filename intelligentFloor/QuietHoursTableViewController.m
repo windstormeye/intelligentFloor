@@ -15,7 +15,6 @@
     
     self.navigationItem.title = @"勿扰模式";
     self.navigationItem.titleView.tintColor = [UIColor whiteColor];
-
     
     _isQuietHours = [[UISwitch alloc]init];
     _isQuietHours.onTintColor = [UIColor colorWithRed:60/255.0 green:182/255.0 blue:228/255.0 alpha:1.0];

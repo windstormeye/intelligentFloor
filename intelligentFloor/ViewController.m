@@ -1,14 +1,9 @@
-
-
 #import "ViewController.h"
 #import "PNChart.h"
 #import "stepStVC.h"
 #import "peopleStVC.h"
 #import <AudioToolbox/AudioToolbox.h>
 #import "loginVC.h"
-
-
-
 
 @interface ViewController () {
     

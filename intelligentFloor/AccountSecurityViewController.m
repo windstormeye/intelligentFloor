@@ -1,4 +1,3 @@
-
 #import "AccountSecurityViewController.h"
 #import "FUITextField.h"
 #import "FUIButton.h"
@@ -11,9 +10,9 @@
     UITextField *_confirmNewPassWord;
 }
 
-@property (nonatomic, strong) FUITextField *originalTxt;
-@property (nonatomic, strong) FUITextField *nowTxt;
-@property (nonatomic, strong) FUITextField *nowAgainTxt;
+@property (nonatomic, strong) FUITextField *originalTxt;    // 初始密码文本框
+@property (nonatomic, strong) FUITextField *nowTxt;    // 当前密码文本框
+@property (nonatomic, strong) FUITextField *nowAgainTxt;    // 再次输入当前密码文本框
 @property (nonatomic, strong) MBProgressHUD *hud;
 
 @end
@@ -43,7 +42,6 @@
     originalTxt.borderWidth = 2.0f;
     originalTxt.cornerRadius = 3.0f;
 
-
     FUITextField *nowTxt = [[FUITextField alloc] initWithFrame:CGRectMake(originalTxt.frame.origin.x, CGRectGetMaxY(originalTxt.frame) + 10, originalTxt.frame.size.width, originalTxt.frame.size.height)];
     [self.view addSubview:nowTxt];
     self.nowTxt = nowTxt;
@@ -56,7 +54,6 @@
     nowTxt.borderWidth = 2.0f;
     nowTxt.cornerRadius = 3.0f;
 
-    
     FUITextField *nowAgainTxt = [[FUITextField alloc] initWithFrame:CGRectMake(originalTxt.frame.origin.x, CGRectGetMaxY(nowTxt.frame) + 10, originalTxt.frame.size.width, originalTxt.frame.size.height)];
     [self.view addSubview:nowAgainTxt];
     self.nowAgainTxt = nowAgainTxt;

@@ -1,5 +1,3 @@
-
-
 #import "MessageTableViewController.h"
 
 @interface MessageTableViewController ()

@@ -1,5 +1,3 @@
-
-
 #import "settingVC.h"
 #import "SettingsItem.h"
 #import "MessageTableViewController.h"
@@ -11,7 +9,6 @@
 @interface settingVC () <UITableViewDelegate,UITableViewDataSource> {
     NSArray *_dataArray;
 }
-
 @end
 
 @implementation settingVC
@@ -32,7 +29,6 @@
     
     UITableView *settingsView = [[UITableView alloc]initWithFrame:self.view.frame style:(UITableViewStyleGrouped)];
     settingsView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];;
-    
     
     settingsView.delegate = self;
     settingsView.dataSource = self;
@@ -62,7 +58,7 @@
     }
     if (indexPath.section == 1) {
         UIButton *quitBtn = [UIButton buttonWithType:(UIButtonTypeSystem)];
-        quitBtn.frame = CGRectMake(self.view.frame.size.width/2-50, 0, 100, 40);
+        quitBtn.frame = CGRectMake(self.view.frame.size.width/2 - 50, 0, 100, 40);
         [quitBtn setTitle:@"退出" forState:(UIControlStateNormal)];
         [quitBtn addTarget:self action:@selector(quit) forControlEvents:(UIControlEventTouchUpInside)];
         [quitBtn setTitleColor:[UIColor redColor] forState:(UIControlStateNormal)];
@@ -96,9 +92,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
-
-
 
 
 @end
