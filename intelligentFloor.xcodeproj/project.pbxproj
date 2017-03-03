@@ -181,12 +181,9 @@
 			children = (
 				2CA0E7961E619B3F00A826E9 /* ViewController.h */,
 				2CA0E7971E619B3F00A826E9 /* ViewController.m */,
-				2CA0E7D71E62B73D00A826E9 /* loginVC.h */,
-				2CA0E7D81E62B73D00A826E9 /* loginVC.m */,
-				2CA0E7DD1E62BCB800A826E9 /* peopleStVC.h */,
-				2CA0E7DE1E62BCB800A826E9 /* peopleStVC.m */,
-				2CA0E7DA1E62BCAA00A826E9 /* stepStVC.h */,
-				2CA0E7DB1E62BCAA00A826E9 /* stepStVC.m */,
+				2CA0E8011E68F71200A826E9 /* step */,
+				2CA0E8021E68F71E00A826E9 /* people */,
+				2CA0E8001E68F70700A826E9 /* login */,
 				2CA0E7FC1E669AE400A826E9 /* Setting */,
 			);
 			name = Controller;
@@ -242,6 +239,33 @@
 				2CA0E7F61E669AA700A826E9 /* AlarmTimeViewController.m */,
 			);
 			name = Setting;
+			sourceTree = "<group>";
+		};
+		2CA0E8001E68F70700A826E9 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				2CA0E7D71E62B73D00A826E9 /* loginVC.h */,
+				2CA0E7D81E62B73D00A826E9 /* loginVC.m */,
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
+		2CA0E8011E68F71200A826E9 /* step */ = {
+			isa = PBXGroup;
+			children = (
+				2CA0E7DA1E62BCAA00A826E9 /* stepStVC.h */,
+				2CA0E7DB1E62BCAA00A826E9 /* stepStVC.m */,
+			);
+			name = step;
+			sourceTree = "<group>";
+		};
+		2CA0E8021E68F71E00A826E9 /* people */ = {
+			isa = PBXGroup;
+			children = (
+				2CA0E7DD1E62BCB800A826E9 /* peopleStVC.h */,
+				2CA0E7DE1E62BCB800A826E9 /* peopleStVC.m */,
+			);
+			name = people;
 			sourceTree = "<group>";
 		};
 		6872581C461BFBB3357B1F48 /* Pods */ = {

@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>BEMSimpleLineGraph.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FlatUIKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,17 +47,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0D3A2255DD8FDD12BBA7AF5EC328AB34</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>11929A53A8AD141288485C2968E5803E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>266E27D897FD7FD68078059CF4D7455F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>53DE108D88A115A7DB763E7A680F5524</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -68,6 +73,11 @@
 			<true/>
 		</dict>
 		<key>D058B89EB3B3DF45457A2DCD3971AFFE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E6712E399E5452CE6C6521FAEA311BA4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

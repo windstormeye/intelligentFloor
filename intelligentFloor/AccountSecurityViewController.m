@@ -108,7 +108,7 @@
                 }
             }
         } else {
-        [MBProgressHUD showError:@"原密码不服"];
+        [MBProgressHUD showError:@"原密码不符"];
         }
     }
 }

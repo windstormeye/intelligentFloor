@@ -118,7 +118,7 @@
     [signUpBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
     // 前往注册按钮
-    UIButton *signUpBtn_small = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX(loginBtn.frame) - 110, CGRectGetMaxY(loginBtn.frame) + 10, 110, 20)];
+    UIButton *signUpBtn_small = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX(loginBtn.frame) - 115, CGRectGetMaxY(loginBtn.frame) + 10, 115, 20)];
     [self.view addSubview:signUpBtn_small];
     self.signUpBtn_small = signUpBtn_small;
     signUpBtn_small.titleLabel.textAlignment = NSTextAlignmentCenter;

@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - BEMSimpleLineGraph (4.1)
   - FlatUIKit (1.6.2)
   - JVFloatLabeledTextField (1.1.1)
   - MBProgressHUD (1.0.0)
@@ -23,6 +24,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - BEMSimpleLineGraph
   - FlatUIKit
   - JVFloatLabeledTextField
   - MBProgressHUD (~> 1.0.0)
@@ -30,12 +32,13 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  BEMSimpleLineGraph: 44fd451f27f8e9cf96f2da5bea27603093576dd1
   FlatUIKit: 1b41f0d4952ce8d970d8479ce79df54a960242c4
   JVFloatLabeledTextField: 0e5524b097f102036214dd8279edc8ecf08b5e18
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
 
-PODFILE CHECKSUM: 037ed98ae369e6b1d582cf99d40d12bfab1240e2
+PODFILE CHECKSUM: 7d277dd8fd625cb89733becd5582abc38700b437
 
 COCOAPODS: 1.1.1

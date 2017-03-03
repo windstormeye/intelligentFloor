@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E6712E399E5452CE6C6521FAEA311BA4'
-               BlueprintName = 'Pods-intelligentFloor'
+               BlueprintIdentifier = '0D3A2255DD8FDD12BBA7AF5EC328AB34'
+               BlueprintName = 'BEMSimpleLineGraph'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-intelligentFloor.a'>
+               BuildableName = 'libBEMSimpleLineGraph.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

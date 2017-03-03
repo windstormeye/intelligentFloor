@@ -89,8 +89,8 @@
 
 -(void)quit{
     loginVC *login = [[loginVC alloc] init];
+    self.navigationController.hidesBottomBarWhenPushed = YES;
     [self presentViewController:login animated:YES completion:nil];
-    NSLog(@"111");
 }
 
 - (void)didReceiveMemoryWarning {

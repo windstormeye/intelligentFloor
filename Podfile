@@ -4,4 +4,5 @@ pod 'PNChart'
 pod 'JVFloatLabeledTextField'
 pod 'FlatUIKit'
 pod 'MBProgressHUD', '~> 1.0.0'
+pod 'BEMSimpleLineGraph'
 end

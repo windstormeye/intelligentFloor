@@ -1,10 +1,3 @@
-//
-//  MBProgressHUD+NJ.m
-//  New
-//
-//  Created by lanou3g on 16/8/24.
-//  Copyright © 2016年 nattinessYang. All rights reserved.
-//
 
 #import "MBProgressHUD+NJ.h"
 
@@ -23,7 +16,7 @@
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.labelText = text;
     // 设置图片
-    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"MBProgressHUD.bundle/%@", icon]]];
+    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@", icon]]];
     // 再设置模式
     hud.mode = MBProgressHUDModeCustomView;
     
@@ -52,7 +45,7 @@
  */
 + (void)showSuccess:(NSString *)success toView:(UIView *)view
 {
-    [self show:success icon:@"success.png" view:view];
+    [self show:success icon:@"success" view:view];
 }
 
 /**
@@ -71,7 +64,7 @@
  *  @param view  需要显示信息的视图
  */
 + (void)showError:(NSString *)error toView:(UIView *)view{
-    [self show:error icon:@"error.png" view:view];
+    [self show:error icon:@"error" view:view];
 }
 
 /**
