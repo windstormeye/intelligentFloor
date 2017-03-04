@@ -21,7 +21,7 @@
 - (NSArray *)yArr {
     if (!_yArr) {
         // 优先初始化 日 步数
-        _yArr = @[@30, @54, @76, @262, @766, @877, @1200, @355];
+        _yArr = @[@30, @54, @76, @262, @766, @877, @1200, @355];    // 伪数据，等待后端数据接入
         // 使用KVO方式优先直接计算出总和
         NSNumber *sum = [_yArr valueForKeyPath:@"@sum.self"];
         self.allStepNum.text = [sum stringValue];
@@ -32,7 +32,7 @@
 - (NSArray *)xArr {
     if (!_xArr) {
         // 优先初始化 日 人流数
-        _xArr = @[@"0",@"3",@"6",@"9",@"12", @"15", @"18", @"21h"];
+        _xArr = @[@"0",@"3",@"6",@"9",@"12", @"15", @"18", @"21h"];    // 伪数据，等待后端数据接入
     }
     return _xArr;
 }
@@ -80,7 +80,6 @@
             }
         }
     }
-
     //把该按钮显示出来即可体现预警功能
 //    self.button = [UIButton buttonWithType:UIButtonTypeCustom];
 //    self.button.frame = CGRectMake(50, 0, 80, 50);
@@ -256,28 +255,28 @@
 // 分割器改变事件
 -(void)change:(UISegmentedControl *)sender{
     if (sender.selectedSegmentIndex == 0) {
-        self.yArr = @[@30, @54, @76, @262, @766, @877, @1200, @355];
+        self.yArr = @[@30, @54, @76, @262, @766, @877, @1200, @355];    // 伪数据，等待后端数据接入
         self.xArr = @[@"0",@"3",@"6",@"9",@"12", @"15", @"18", @"21h"];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.myGraph reloadGraph];
             self.allStepNum.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
         });
     } else if (sender.selectedSegmentIndex == 1) {
-        self.yArr = @[@8990, @7622, @7352, @6098, @6788, @7865, @9055];
+        self.yArr = @[@8990, @7622, @7352, @6098, @6788, @7865, @9055];    // 伪数据，等待后端数据接入
         self.xArr = @[@"周日",@"周一",@"周二",@"周三",@"周四", @"周五", @"周六"];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.myGraph reloadGraph];
             self.allStepNum.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
         });
     } else if (sender.selectedSegmentIndex == 2) {
-        self.yArr = @[@40992, @45590, @44321, @50111, @48765, @43221, @42010];
+        self.yArr = @[@40992, @45590, @44321, @50111, @48765, @43221, @42010];    // 伪数据，等待后端数据接入
         self.xArr = @[@"1",@"5",@"10",@"15",@"20", @"25", @"30d"];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.myGraph reloadGraph];
             self.allStepNum.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
         });
     } else if (sender.selectedSegmentIndex == 3) {
-        self.yArr = @[@256879, @226578, @204542, @208768, @231232, @222168, @298987, @199897, @267980, @198698, @199999, @201768];
+        self.yArr = @[@256879, @226578, @204542, @208768, @231232, @222168, @298987, @199897, @267980, @198698, @199999, @201768];    // 伪数据，等待后端数据接入
         self.xArr = @[@"1",@"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11", @"12m"];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.myGraph reloadGraph];

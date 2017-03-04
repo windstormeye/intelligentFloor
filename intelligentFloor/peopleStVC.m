@@ -24,7 +24,7 @@
 - (NSArray *)yArr {
     if (!_yArr) {
         // 优先初始化成日步数
-        _yArr = @[@60, @20, @9, @50, @192, @200, @452, @369];
+        _yArr = @[@60, @20, @9, @50, @192, @200, @452, @369];    // 伪数据，等待后端数据接入
         // 使用KVO方式优先直接计算出总和
         NSNumber *sum = [_yArr valueForKeyPath:@"@sum.self"];
         self.allStepNum.text = [sum stringValue];
@@ -189,28 +189,28 @@
 // 分割器改变事件
 -(void)change:(UISegmentedControl *)sender{
     if (sender.selectedSegmentIndex == 0) {
-        self.yArr = @[@60, @20, @9, @50, @192, @200, @452, @369];
+        self.yArr = @[@60, @20, @9, @50, @192, @200, @452, @369];    // 伪数据，等待后端数据接入
         self.xArr = @[@"0",@"3",@"6",@"9",@"12", @"15", @"18", @"21h"];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.myGraph reloadGraph];
             self.allStepNum.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
         });
     } else if (sender.selectedSegmentIndex == 1) {
-        self.yArr = @[@1305, @1501, @1209, @1122, @1500, @1249, @1988];
+        self.yArr = @[@1305, @1501, @1209, @1122, @1500, @1249, @1988];    // 伪数据，等待后端数据接入
         self.xArr = @[@"周日",@"周一",@"周二",@"周三",@"周四", @"周五", @"周六"];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.myGraph reloadGraph];
             self.allStepNum.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
         });
     } else if (sender.selectedSegmentIndex == 2) {
-        self.yArr = @[@1305, @5988, @6099, @6011, @7201, @5921, @6999];
+        self.yArr = @[@1305, @5988, @6099, @6011, @7201, @5921, @6999];    // 伪数据，等待后端数据接入
         self.xArr = @[@"1",@"5",@"10",@"15",@"20", @"25", @"30d"];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.myGraph reloadGraph];
             self.allStepNum.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
         });
     } else if (sender.selectedSegmentIndex == 3) {
-        self.yArr = @[@37012, @35012, @30251, @35678, @30987, @34562, @33321, @29989, @40987, @34980, @40981, @38769];
+        self.yArr = @[@37012, @35012, @30251, @35678, @30987, @34562, @33321, @29989, @40987, @34980, @40981, @38769];    // 伪数据，等待后端数据接入
         self.xArr = @[@"1",@"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11", @"12m"];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.myGraph reloadGraph];

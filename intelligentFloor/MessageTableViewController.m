@@ -57,6 +57,7 @@
 -(void)isOpenNewMessage{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if (_newMessage.isOn) {
+        // 接收到后台数据后，在用户第一次登录时，请配置好相关个性化数据
         NSLog(@"新消息提醒已开启");
         [defaults setBool:YES forKey:@"isOpenNewMessage"];
     }else{
@@ -69,6 +70,7 @@
 -(void)isOpenVoice{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if (_isOpenVoice.isOn) {
+        // 接收到后台数据后，在用户第一次登录时，请配置好相关个性化数据
         NSLog(@"声音已开启");
         [defaults setBool:YES forKey:@"isOpenVoice"];
     }else{
@@ -81,6 +83,7 @@
 -(void)isOpenVibration{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if (_isVibration.isOn) {
+        // 接收到后台数据后，在用户第一次登录时，请配置好相关个性化数据
         NSLog(@"振动已开启");
         [defaults setBool:YES forKey:@"isOpenVibration"];
     }else{

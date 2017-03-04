@@ -160,7 +160,7 @@
 - (void)loginBtnClick {
     NSString *nameStr = [NSString stringWithString:self.nameTxt.text];
     NSString *passwdStr = [NSString stringWithString:self.passwdTxt.text];
-    
+    // 请在此与服务器进行用户登录及注册的交互
     if ([nameStr  isEqual: @"test"] && [passwdStr  isEqual: @"test"]) {
         [[NSUserDefaults standardUserDefaults] setObject:nameStr forKey:@"user_name"];
         [[NSUserDefaults standardUserDefaults] setObject:passwdStr forKey:@"user_passwd"];

@@ -31,6 +31,7 @@
 
 -(void)isOpenQuietHours{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    // 接收到后台数据后，在用户第一次登录时，请配置好相关个性化数据
     if (_isQuietHours.isOn) {
         NSLog(@"开启勿扰模式");
         [defaults setBool:YES forKey:@"isOpenQuietHours"];

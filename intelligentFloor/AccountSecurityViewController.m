@@ -95,10 +95,10 @@
                     if ([nowStr isEqualToString:originalStr]) {
                         [MBProgressHUD showError:@"与原密码不能相同"];
                     } else {
+                        // 请在此上传修改成功后的用户密码
                         [[NSUserDefaults standardUserDefaults] setObject:nowStr forKey:@"user_passwd"];
                         [MBProgressHUD showSuccess:@"修改成功"];
                         [self.navigationController popViewControllerAnimated:YES];
-                        // 上传服务器
                     }
                 } else {
                     [MBProgressHUD showError:@"两次密码输入不同"];
